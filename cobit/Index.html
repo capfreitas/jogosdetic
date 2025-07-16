@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Processos COBIT v5.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="head">
+        <h1>Jogo de Processos - COBIT</h1>
+    </header>
+
+    <nav id="menu">
+        <a href="../index.html" class="menu-btn">⬅ Voltar ao Índice</a>
+        <button id="newGameBtn" class="menu-btn">Novo Jogo</button>
+        <button id="shuffleBtn" class="menu-btn">Randomizar</button>
+        <button id="checkResultBtn" class="menu-btn">Conferir Resultado</button>
+    </nav>
+    
+    <div id="results-display"></div>
+
+    <main id="game-container">
+        <div id="process-deck">
+            <h2 class="containerTitle">Processo para Classificar</h2>
+            <div id="deck-navigation">
+                <button id="btnUndo" title="Desfazer Última Jogada">↶</button> <button id="btnFirst" title="Primeiro">«</button>
+                <button id="btnPrev" title="Anterior">‹</button>
+                <span id="deck-counter">1/37</span>
+                <button id="btnNext" title="Próximo">›</button>
+                <button id="btnLast" title="Último">»</button>
+            </div>
+            <div id="card-holder">
+                </div>
+        </div>
+
+        <div id="target-buttons">
+            <button class="target-btn" data-target-id="1">EDM <span class="domain-counter">(0)</span></button>
+            <button class="target-btn" data-target-id="2">APO <span class="domain-counter">(0)</span></button>
+            <button class="target-btn" data-target-id="3">BAI <span class="domain-counter">(0)</span></button>
+            <button class="target-btn" data-target-id="4">DSS <span class="domain-counter">(0)</span></button>
+            <button class="target-btn" data-target-id="5">MEA <span class="domain-counter">(0)</span></button>
+        </div>
+
+        <div id="domain-panes">
+            </div>
+    </main>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

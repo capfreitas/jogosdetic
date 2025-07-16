@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="title" content="AamirAfridi.com : COBIT Process game" />
+<meta name="keywords" content="jquery, cobit, isaca, aamir, afridi, aamirafridi, jquery, governance, management, free, javascript, online, game, online game, google, js, play, business, sellers, manager, aceptance, business analysis">
+
+<title>Jogo de Processos - COBIT</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.2.1.js"></script>
+<script type="text/javascript" src="js/ui.sortable.js"></script>
+</head>
+<body>
+<div id="head">
+<h1 align="center">&nbsp;&nbsp;Jogo de processos - COBIT<sup style="font-size:8px;"> <br/>Versão 1.0</sup><br/><span>( by <a href="http://www.aamirafridi.com" target="aamir">aamirafridi.com</a> | <a href="mailto:info@aamirafridi.com">info@aamirafridi.com</a> ) Tradução e adaptação: Antonio Paulino (<a href="mailto:apaulino@globo.com">apaulino@globo.com</a>)</span><br /><span>Revisado conforme COBIT&reg; 5  Modelo Corporativo para Governança e Gestão de TI da Organização<br/></span></h1>
+</div>
+<div id="menu">
+	<a href="pmbok-grupos.htm" id="new">Começar um novo jogo</a> |
+	<a href="#" id="shu">Randomizar lista</a> |
+	<a href="#" id="result">Conferir resultado</a>
+</div>
+<ul id="masterList">
+		<div id="mixed">
+			<span class="containerTitle">Processos</span>
+			<ul id="0">
+
+				<li id="1" value="101">Garantir a Definição e Manutenção do Modelo de Governança</li>
+				<li id="1" value="102">Garantir a Realização de Benefícios</li>
+				<li id="1" value="103">Garantir a Otimização do Risco</li>
+				<li id="1" value="104">Garantir a Otimização de Recursos</li>
+				<li id="1" value="105">Garantir a Transparência para as partes interessadas</li>
+
+				<li id="2" value="203">Gerenciar a Estrutura de Gestão de TI</li>
+				<li id="2" value="204">Gerenciar a Estratégia</li>
+				<li id="2" value="205">Gerenciar a Arquitetura da Organização</li>
+				<li id="2" value="206">Gerenciar Inovação</li>
+				<li id="2" value="207">Gerenciar Portfólio</li>
+				<li id="2" value="208">Gerenciar Orçamentos e Custos</li>
+				<li id="2" value="209">Gerenciar Recursos Humanos</li>
+				<li id="2" value="210">Gerenciar Relacionamentos</li>
+				<li id="2" value="211">Gerenciar Contratos de Prestação de Serviços</li>
+				<li id="2" value="212">Gerenciar Fornecedores</li>
+				<li id="2" value="213">Gerenciar Qualidade</li>
+				<li id="2" value="214">Gerenciar Riscos</li>
+				<li id="2" value="215">Gerenciar Segurança</li>
+
+				<li id="3" value="327">Gerenciar Programas e Projetos</li>
+				<li id="3" value="328">Gerenciar Definição de Requisitos</li>
+				<li id="3" value="329">Gerenciar Identificação e Desenvolvimento de Soluções</li>
+				<li id="3" value="330">Gerenciar Disponibilidade e Capacidade</li>
+				<li id="3" value="331">Gerenciar Capacidade de Mudança Organizacional</li>
+				<li id="3" value="332">Gerenciar Mudanças</li>
+				<li id="3" value="333">Gerenciar Aceitação e Transição da Mudança</li>
+				<li id="3" value="334">Gerenciar Conhecimento</li>
+				<li id="3" value="335">Gerenciar Ativos</li>
+				<li id="3" value="336">Gerenciar Configuração</li>
+
+				<li id="4" value="435">Gerenciar Operações</li>
+				<li id="4" value="436">Gerenciar Solicitações e Incidentes de Serviço</li>
+				<li id="4" value="437">Gerenciar Problemas</li>
+				<li id="4" value="438">Gerenciar Continuidade</li>
+				<li id="4" value="439">Gerenciar Serviços de Segurança</li>
+				<li id="4" value="440">Gerenciar os Controles de Processos de Negócio</li>
+
+				<li id="5" value="546">Monitorar, Analisar e Avaliar Desempenho e Conformidade</li>
+				<li id="5" value="547">Monitorar, Analisar e Avaliar o Sistema de Controle Interno</li>
+				<li id="5" value="548">Monitorar, Analisar e Avaliar Conformidade com Requisitos Externos</li>
+			</ul>
+		</div>
+
+		<div class="pane">
+			<span class="containerTitle">Avaliar, Dirigir e Monitorar (EDM)</span>
+			<ul id="1" class="edm">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+
+		<div class="pane">
+			<span class="containerTitle">Alinhar, Planejar e Organizar (APO)</span>
+			<ul id="2" class="apo">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+
+		<div class="pane">
+			<span class="containerTitle">Construir, Adquirir e Implementar (BAI)</span>
+			<ul id="3" class="bai">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+
+		<div class="pane">
+			<span class="containerTitle">Entregar, Serviço e Suporte(DSS)</span>
+			<ul id="4" class="dss">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+
+		<div class="pane">
+			<span class="containerTitle">Monitorar, Analisar e Avaliar (MEA)</span>
+			<ul id="5" class="mea">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+<div id="footer">
+<strong>Como jogar:</strong> Apenas arraste um item da lista 'Processos' para baixo de um dos títulos de Domínio de Processos. Quando terminar, confira o resultado.
+</div>
+
+<script type="text/javascript">
+	//Shuffle the list
+	$('#0').shuffle();
+	$('#shu').click(function(){
+		$('#0').shuffle();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		return false;
+	});
+
+	//Initiating processes ordering test
+	$('#initiating').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='pmbok-grupos.htm'>Começar um novo jogo</a>");
+		$('#initiating').replaceWith("<a href=''></a>");
+		$('#planning').replaceWith("<a href=''></a>");
+		$('#executing').replaceWith("<a href=''></a>");
+		$('#monitoring').replaceWith("<a href=''></a>");
+		$('#closing').replaceWith("<a href=''></a>");
+	    $('#result').replaceWith("<a href='#' id='seq'>Conferir Resultado</a>");
+	    $('#shu').replaceWith("<a href='#' id='shuIni'>Randomizar lista</a>");
+
+		$('#shuIni').click(function(){
+			$('.initiating').shuffle();
+			$(".initiating").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+
+		//Show sequence of initiating items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+
+			i=101;
+			n=1;
+
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" passos &uarr;";
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" passos &darr;";
+
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#ffb058');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+
+		  return false;
+		});
+
+		//From everything from mixed but leave initiating
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='1') $(this).remove();//remove all others
+		});
+
+		//shift iitiating list from mixed to planning
+		$('.initiating').append($('#0').html());
+		//Shuffle initiating list
+		$('.initiating').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".initiating").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+
+		//Remove all other panels and just leave the initiating panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('initiating')) $(this).parent().remove();
+		});
+		return false;
+	});
+
+	//Planning processes ordering test
+	$('#planning').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='pmbok-grupos.htm'>Começar um novo jogo</a>");
+		$('#initiating').replaceWith("<a href=''></a>");
+		$('#planning').replaceWith("<a href=''></a>");
+		$('#executing').replaceWith("<a href=''></a>");
+		$('#monitoring').replaceWith("<a href=''></a>");
+		$('#closing').replaceWith("<a href=''></a>");
+	    $('#result').replaceWith("<a href='#' id='seq'>Conferir Resultado</a>");
+		$('#shu').replaceWith("<a href='#' id='shuPla'>Randomizar lista</a>");
+
+		$('#shuPla').click(function(){
+			$('.planning').shuffle();
+			$(".planning").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+
+		//Show sequence of planning items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+
+			i=201;
+			n=1;
+
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" passos &uarr;";
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" passos &darr;";
+
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#ffb058');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+
+		  return false;
+		});
+
+		//From everything from mixed but leave planning
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='2') $(this).remove();//remove all others
+		});
+
+		//shift planning list from mixed to planning
+		$('.planning').append($('#0').html());
+		//Shuffle planning list
+		$('.planning').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".planning").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+
+		//Remove all other panels and just leave the planning panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('planning')) $(this).parent().remove();
+		});
+		return false;
+	});
+
+	//Executing processes ordering test
+	$('#executing').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='pmbok-grupos.htm'>Começar um novo jogo</a>");
+		$('#initiating').replaceWith("<a href=''></a>");
+		$('#planning').replaceWith("<a href=''></a>");
+		$('#executing').replaceWith("<a href=''></a>");
+		$('#monitoring').replaceWith("<a href=''></a>");
+		$('#closing').replaceWith("<a href=''></a>");
+	    $('#result').replaceWith("<a href='#' id='seq'>Conferir Resultado</a>");
+		$('#shu').replaceWith("<a href='#' id='shuExe'>Randomizar lista</a>");
+
+		$('#shuExe').click(function(){
+			$('.executing').shuffle();
+			$(".executing").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+
+		//Show sequence of initiating items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+
+			i=301;
+			n=1;
+
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" passos &uarr;";
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" passos &darr;";
+
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#ffb058');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+
+		  return false;
+		});
+
+		//From everything from mixed but leave executing
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='3') $(this).remove();//remove all others
+		});
+
+		//shift iitiating list from mixed to executing
+		$('.executing').append($('#0').html());
+		//Shuffle executing list
+		$('.executing').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".executing").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+
+		//Remove all other panels and just leave the initiating panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('executing')) $(this).parent().remove();
+		});
+		return false;
+	});
+
+	//monitoring processes ordering test
+	$('#monitoring').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='pmbok-grupos.htm'>Começar um novo jogo</a>");
+		$('#initiating').replaceWith("<a href=''></a>");
+		$('#planning').replaceWith("<a href=''></a>");
+		$('#executing').replaceWith("<a href=''></a>");
+		$('#monitoring').replaceWith("<a href=''></a>");
+		$('#closing').replaceWith("<a href=''></a>");
+	    $('#result').replaceWith("<a href='#' id='seq'>Conferir Resultado</a>");
+		$('#shu').replaceWith("<a href='#' id='shuMon'>Randomizar lista</a>");
+
+		$('#shuMon').click(function(){
+			$('.monitoring').shuffle();
+			$(".monitoring").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+
+		//Show sequence of monitoring items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+
+			i=401;
+			n=1;
+
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" passos &uarr;";
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" passos &darr;";
+
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#ffb058');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+
+		  return false;
+		});
+
+		//From everything from mixed but leave monitoring
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='4') $(this).remove();//remove all others
+		});
+
+		//shift iitiating list from mixed to monitoring
+		$('.monitoring').append($('#0').html());
+		//Shuffle monitoring list
+		$('.monitoring').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".monitoring").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+
+		//Remove all other panels and just leave the monitoring panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('monitoring')) $(this).parent().remove();
+		});
+		return false;
+	});
+
+	//Closing processes ordering test
+	$('#closing').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='pmbok-grupos.htm'>Começar um novo jogo</a>");
+		$('#initiating').replaceWith("<a href=''></a>");
+		$('#planning').replaceWith("<a href=''></a>");
+		$('#executing').replaceWith("<a href=''></a>");
+		$('#monitoring').replaceWith("<a href=''></a>");
+		$('#closing').replaceWith("<a href=''></a>");
+	    $('#result').replaceWith("<a href='#' id='seq'>Conferir Resultado</a>");
+		$('#shu').replaceWith("<a href='#' id='shuClo'>Randomizar lista</a>");
+
+		$('#shuClo').click(function(){
+			$('.closing').shuffle();
+			$(".closing").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+
+		//Show sequence of closing items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+
+			i=501;
+			n=1;
+
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" passos &uarr;";
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" passos &darr;";
+
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#ffb058');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+
+		  return false;
+		});
+
+		//From everything from mixed but leave closing
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='5') $(this).remove();//remove all others
+		});
+
+		//shift iitiating list from mixed to planning
+		$('.closing').append($('#0').html());
+		//Shuffle closing list
+		$('.closing').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".closing").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+
+		//Remove all other panels and just leave the closing panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('closing')) $(this).parent().remove();
+		});
+		return false;
+	});
+
+	$('#new').click(function(){
+		if(!confirm('Confirma que quer começar um novo jogo?')) return false;
+		var list='';
+		$('.pane').each(function(){
+			list+=$(this).find('ul').html();
+			$(this).find('ul').html("<li class='unmovable'></li>");
+		});
+		$('#0').append(list).shuffle();
+		$('#0').find('.correct').each(function(){
+			$(this).parent().css('background','#E7E7E7');
+			$(this).remove();
+		});
+		$('#r').remove();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		$("#footer").remove();
+		return false;
+	});
+
+	//Make all <li> items in the list sortable using the jQuery UI Sortables code
+	$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+	$(".containerTitle").mousedown(function(){ alert('Este é o cabeçalho, não pode movê-lo!'); });
+	$('#hide,#hide1').click(function(){ $(this).parent().slideUp('slow');return false; });
+
+	$('#result').click(
+		function()
+		{
+			if($('#0').find('li').length==37)
+			{
+			    alert('Você ainda não iniciou o jogo, arraste pelo menos um processo.');
+				return false;
+				//if (!confirm('Are you sure you want to check the results\nbefore you complete the game?')) return false;
+			}
+
+			var wrong=0;
+			var total=0;
+			$("#masterList").find('li').each(function(){
+				//Check the result
+				if($(this).attr('id')!=$(this).parent().attr('id') && $(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable')
+				{
+					$(this).css("background","#ffb058");
+					wrong+=1;
+					var correctHeading='';
+					var currentId=$(this).attr('id');
+					$("#masterList").find('ul').each(function(){
+						if($(this).attr('id')==currentId)
+							correctHeading=$(this).parent().find('.containerTitle').html();
+					});
+					$(this).find('.correct').remove();
+					$(this).append("<span class='correct' style='display:block;padding-top:3px;margin-top:3px;border-top: 1px dotted #ff0000;'><strong>Deveria ser em:<br> \""+ correctHeading +"\"</strong></span>");
+				}
+
+				//attmpted
+				if($(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable') total+=1;
+			});
+			$('#r').remove();
+
+			if(total>0)
+			{
+				var string="<span id='r'> ( Total: <strong>37</strong> | Tentativas: <strong>";
+				string+=total+"</strong> | Resultado: <strong>"+ parseInt(total-wrong)+"</strong> de <strong>";
+				string+=total + "</strong> | <strong>";
+				string+=parseInt((total-wrong)*100/total);
+				string+="%</strong>)</span>";
+				$(this).after(string);
+			}
+			return false;
+		});
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4142584-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
